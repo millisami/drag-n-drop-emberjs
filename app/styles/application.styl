@@ -1,4 +1,26 @@
 @import 'nib'
+@import 'grid'
 
 html, body
   margin 20px
+
+/* semantic.gs make the grid fluid */
+total-width=100%
+
+/* since it's fluid, let's put a max width and center the content */
+#container
+  max-width: 960px
+  min-height: 480px
+  margin-left: auto
+  margin-right: auto
+
+.products
+  column(6)
+
+.cart
+  column(6)
+  .basket
+    height 200px
+    width: 200px
+    border-radius 10px
+    background #eee
