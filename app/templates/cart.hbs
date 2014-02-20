@@ -1,3 +1,12 @@
+<div class="total">{{total_price}}</div>
 <div class="shop_cart">
   <span>Drop the product here</span>
+</div>
+
+<div class="line_items">
+  {{#each line_item in line_items}}
+    <div class="line_item">
+      {{line_item.title}} <span>{{line_item.price}}</span>
+    </div>
+  {{/each}}
 </div>
