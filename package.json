@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "cake server",
-    "test": "./node_modules/.bin/testem"
+    "test": "./node_modules/.bin/testem",
+    "postinstall": "cake build"
   },
   "dependencies": {
     "brunch": "=1.7.13",
@@ -33,7 +34,9 @@
     "semver": "~2.2.1",
     "adm-zip": "~0.4.3",
     "github": "~0.1.12",
-    "digest-brunch": "~1.0.4"
+    "digest-brunch": "~1.0.4",
+    "express": "~3.4.8",
+    "request": "~2.34.0"
   },
   "devDependencies": {
     "qunitjs": "*",
