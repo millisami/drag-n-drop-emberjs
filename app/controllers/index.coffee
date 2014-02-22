@@ -9,6 +9,7 @@ module.exports = App.IndexController = Ember.ArrayController.extend
     total = 0
     if @get('line_items').length > 0
       @get('line_items').forEach (line_item) ->
-        total += line_item.price
+        quantity = line_item.quantity
+        total += line_item.price * quantity
     total
-  ).property('line_items.@each')
+  ).property('line_items.@each.quantity')
