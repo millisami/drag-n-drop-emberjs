@@ -5,4 +5,6 @@ module.exports = App.ProductItemView = Ember.View.extend
 
   dragStart: (ev) ->
     ev.dataTransfer.setData('text/data', @get('content.id'))
-    console.log(@get('content.id'))
+    $('.basket').addClass('dragging')
+  dragEnd: ->
+    $('.basket').removeClass('dragging')
